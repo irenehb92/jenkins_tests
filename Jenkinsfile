@@ -1,9 +1,12 @@
 pipeline {
+    parameters {
+        string(defaultValue: 'Hello', name: 'ECHO_TEXT')
+    }
     agent { label 'PC-Monitoring' }
     stages {
         stage('Main') {
             steps {
-                echo "Hello"
+                echo "ECHO_TEXT is: ${params.ECHO_TEXT}"
             }
         }
     }
