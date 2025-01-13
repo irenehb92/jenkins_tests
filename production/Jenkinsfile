@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('Main') {
             steps {
-                echo "ECHO_TEXT is: ${params.ECHO_TEXT}"
+                echo "ECHO_TEXT from PRODUCTION DIRECTORY is: ${params.ECHO_TEXT}"
             }
         }
     }
